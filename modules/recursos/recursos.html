@@ -5,17 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Directorio de Recursos | GlobalNest</title>
   <link rel="stylesheet" href="recursos.css">
+  <link rel="stylesheet" href="../shared/shared.css">
   <script defer src="recursos.js"></script>
   <script defer src="../shared/shared.js"></script>
 </head>
 <body>
+  <!-- Navbar compartido -->
   <div id="navbar"></div>
 
-  <main>
-    <section id="recursos">
-      <h2>Directorio de Recursos Sociales</h2>
-      <p>Encuentra organizaciones que brindan apoyo a personas migrantes.</p>
+  <main class="main-content">
+    <section class="recursos-hero">
+        <div class="recursos-hero-content">
+        <div class="recursos-hero-text">
+          <h1>🏠 Directorio de Recursos Sociales</h1>
+          <p>Encuentra organizaciones confiables que brindan apoyo a personas migrantes.</p>
+        </div>
+        <div class="recursos-hero-image">
+         <img src="../../assets/img/empleos.png" alt="Buscador de Empleos">
+        </div>
+      </div>
+    </section>
 
+    <section id="recursos" class="modules">
       <div class="filters">
         <label for="filter-tipo">Filtrar por tipo:</label>
         <select id="filter-tipo"></select>
@@ -26,6 +37,7 @@
     </section>
   </main>
 
+  <!-- Footer compartido -->
   <div id="footer"></div>
 </body>
 </html>

@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscador de Empleos | GlobalNest</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../shared/shared.css">
   <link rel="stylesheet" href="empleos.css">
-  <script defer src="empleos.js"></script>
+
+  <!-- JS -->
   <script defer src="../shared/shared.js"></script>
+  <script defer src="empleos.js"></script>
 </head>
+
 <body>
+
+  <!-- Navbar compartido -->
   <div id="navbar"></div>
 
-  <main>
-    <section id="buscador">
-      <h2>Buscador de Empleos</h2>
-      <p>Consulta oportunidades laborales y filtra según tus necesidades.</p>
+  <main class="main-content">
+    <section class="empleos-hero">
+      <div class="empleos-hero-content">
+        <div class="empleos-hero-text">
+          <h1>🧰 Buscador de Empleos</h1>
+          <p>Encuentra oportunidades laborales confiables cerca de ti y filtra según tus necesidades.</p>
+        </div>
+        <div class="empleos-hero-image">
+         <img src="../../assets/img/empleos.png" alt="Buscador de Empleos">
+        </div>
+      </div>
+    </section>
 
+    <section class="empleos-filters">
+      <h2>Filtra las ofertas</h2>
       <div class="filters">
         <label for="filter-zona">Zona geográfica:</label>
         <select id="filter-zona"></select>
@@ -25,7 +44,10 @@
 
         <button id="apply-filter">Aplicar Filtros</button>
       </div>
+    </section>
 
+    <section class="empleos-listado">
+      <h2>Ofertas disponibles</h2>
       <div id="job-list" class="job-list"></div>
       <div id="job-details" class="job-details">
         <h3 id="job-title">Detalles del Empleo</h3>
@@ -34,6 +56,9 @@
     </section>
   </main>
 
+  <!-- Footer compartido -->
   <div id="footer"></div>
+
 </body>
+
 </html>

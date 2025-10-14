@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checklist de Trámites | GlobalNest</title>
   <link rel="stylesheet" href="tramites.css">
+  <link rel="stylesheet" href="../shared/shared.css">
   <script defer src="tramites.js"></script>
   <script defer src="../shared/shared.js"></script>
 </head>
+
 <body>
+
+  <!-- Navbar compartido -->
   <div id="navbar"></div>
 
-  <main>
-    <section id="checklist">
-      <h2>Checklist de Trámites Legales</h2>
-      <p>Organiza y marca los pasos completados en tus trámites migratorios.</p>
-      <ul id="tramite-list"></ul>
+  <!-- Hero -->
+  <section class="tramites-hero">
+    <div class="tramites-hero-content">
+      <div class="tramites-hero-text">
+          <h1>📋 Checklist de Trámites</h1>
+          <p>Organiza tus trámites migratorios paso a paso y mantente al día con cada procedimiento.</p>
+      </div>
+      <div class="tramites-hero-image">
+        <img src="../../assets/img/tramites.png" alt="Trámites">
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist -->
+  <main class="main-content">
+    <section class="checklist-section">
+      <ul id="tramite-list" class="checklist-list"></ul>
     </section>
   </main>
 
+  <!-- Footer compartido -->
   <div id="footer"></div>
+
 </body>
+
 </html>

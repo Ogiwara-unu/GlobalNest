@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Navbar base */
+.navbar {
+    background-color: #FFFEFE;
+    border-bottom: 1px solid #C6CBDF;
+    font-family: Caudex, sans-serif;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #a4accd;
+    text-decoration: none;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+/* Menú principal */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li a {
+    color: #6C7184;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #bac1e2;
+}
+
+/* Hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #6C7184;
+    transition: all 0.3s;
+}
+
+/* Responsive: pantallas medianas y pequeñas */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background-color: #FFFEFE;
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        gap: 1rem;
+        transition: right 0.3s ease-in-out;
+        border-left: 1px solid #C6CBDF;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.footer {
+    background-color: #FFFEFE;
+    border-top: 1px solid #C6CBDF;
+    /* línea decorativa */
+    color: #6C7184;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 0.95rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive: pantallas medianas y pequeñas */
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+    }
+}

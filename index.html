@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalNest | Plataforma de Inclusión</title>
+
+  <!-- Fuentes -->
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="/modules/shared/shared.css">
   <script defer src="scripts/main.js"></script>
 </head>
+
 <body>
+
   <!-- Navbar compartido -->
   <div id="navbar"></div>
 
   <main class="main-content">
-    <section class="intro">
-      <h1>🌍 Plataforma de Inclusión para Migrantes</h1>
-      <p>Centraliza información para tu integración social, laboral y legal.</p>
+    
+    <!-- Sección de bienvenida -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="assets/img/banner.png" alt="GlobalNest Banner" class="hero-image">
+        <div class="hero-text">
+          <h1>🌍 Bienvenido a GlobalNest</h1>
+          <p>Con GlobalNest tus trámites son más fáciles, tu integración más rápida y segura.</p>
+          <a href="#modules" class="btn-hero">Explora los módulos</a>
+        </div>
+      </div>
     </section>
 
-    <section class="modules">
-      <div class="module-card">
-        <h2>🧰 Buscador de Empleos</h2>
-        <p>Explora oportunidades laborales según tu ubicación y sector.</p>
-        <a href="modules/empleos/empleos.html" class="btn">Ir al módulo</a>
-      </div>
+    <!-- Sección de módulos / acciones -->
+    <section class="modules" id="modules">
+      <h2 class="modules-title">¿Qué puedes hacer con GlobalNest?</h2>
+      <div class="modules-grid">
+        <div class="module-card">
+          <h2>🧰 Buscador de Empleos</h2>
+          <p>Explora oportunidades laborales según tu ubicación y sector.</p>
+          <a href="/modules/empleos/empleos.html" class="btn">Ir al módulo</a>
+        </div>
 
-      <div class="module-card">
-        <h2>📋 Checklist de Trámites</h2>
-        <p>Organiza tus trámites migratorios paso a paso.</p>
-        <a href="modules/tramites/tramites.html" class="btn">Ir al módulo</a>
-      </div>
+        <div class="module-card">
+          <h2>📋 Checklist de Trámites</h2>
+          <p>Organiza tus trámites migratorios paso a paso.</p>
+          <a href="/modules/tramites/tramites.html" class="btn">Ir al módulo</a>
+        </div>
 
-      <div class="module-card">
-        <h2>🏠 Recursos Sociales</h2>
-        <p>Encuentra organizaciones y refugios disponibles para migrantes.</p>
-        <a href="modules/recursos/recursos.html" class="btn">Ir al módulo</a>
+        <div class="module-card">
+          <h2>🏠 Recursos Sociales</h2>
+          <p>Encuentra organizaciones y refugios disponibles para migrantes.</p>
+          <a href="/modules/recursos/recursos.html" class="btn">Ir al módulo</a>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer compartido -->
   <div id="footer"></div>
+
+  <script defer src="/modules/shared/shared.js"></script>
 </body>
 </html>

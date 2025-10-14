@@ -1,28 +1,98 @@
+/* Tipografía y fondo general */
 body {
-  background: #f4f4f4;
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background: #FFFEFE;
+  color: #6C7184;
   margin: 0;
 }
 
-h2 {
-  color: #007bff;
+/* Hero */
+.tramites-hero {
+  background-color: #F1F0EC;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid #C6CBDF;
 }
 
-ul {
+.tramites-hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.tramites-hero-text h1 {
+  color: #6C7184;
+  font-size: 2.7rem;
+  font-family: Caudex, serif;
+  margin-bottom: 1rem;
+}
+.tramites-hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+.tramites-hero-text p {
+color: #6C7184;
+  font-size: 1.7rem;
+}
+
+.tramites-hero-image {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.tramites-hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  background-color: #eee9e0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Checklist */
+.checklist-section {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+}
+
+.checklist-list {
   list-style: none;
   padding: 0;
 }
 
-li {
-  background: #fff;
+.checklist-list li {
+  background: #FFFEFE;
+  border: 1px solid #C6CBDF;
   padding: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
   display: flex;
   align-items: center;
+  transition: transform 0.2s;
+}
+
+.checklist-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 input[type="checkbox"] {
-  margin-right: 0.8rem;
+  margin-right: 1rem;
   transform: scale(1.3);
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .tramites-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tramites-hero-image img {
+    max-width: 100%;
+  }
 }

@@ -1,42 +1,278 @@
+/* Fuentes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   line-height: 1.6;
-  background: #f9f9f9;
+  background: #FFFEFE;
+  color: #6C7184;
 }
 
-.navbar {
-  background: #007bff;
-  padding: 1rem;
-  text-align: center;
+/* HERO / Bienvenida */
+.hero {
+  background-color: #F1F0EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
-.navbar a {
-  color: white;
-  margin: 0 1rem;
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: #eee9e0;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.9rem;
+  font-family: Caudex, serif;
+  color: #6C7184;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 2rem;
+  color: #6C7184;
+  margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #a4accd;
+  color: #FFFEFE;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s;
 }
 
-.footer {
-  background: #e9ecef;
+.btn-hero:hover {
+  background-color: #6C7184;
+}
+
+/* Módulos / Acciones */
+.modules {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  margin-top: 6rem;
+  margin-bottom: 7rem;
+}
+
+.modules-title {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  color: #6C7184;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .module-card {
-  background: #fff;
-  border-radius: 10px;
+  background-color: #eee9e0;
+  border-radius: 15px;
   padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn {
-  display: inline-block;
-  background: #007bff;
-  color: white;
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.module-card h2 {
+  color: #6C7184;
+  margin-bottom: 0.8rem;
+}
+
+.module-card p {
+  color: #6C7184;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.module-card .btn {
+  background-color: #a4accd;
+  color: #FFFEFE;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
+  transition: background 0.3s;
+}
+
+.module-card .btn:hover {
+  background-color: #6C7184;
+}
+
+/* Responsivo */
+@media screen and (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+
+/* Tipografía y fondo */
+
+
+/* Hero */
+.about-hero {
+  background: #F1F0EC;
+  border-bottom: 1px solid #C6CBDF;
+  padding: 2rem 1rem;
+}
+
+.about-hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.about-hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-hero-text h1 {
+   color: #6C7184;
+  font-size: 2.7rem;
+  font-family: Caudex, serif;
+  margin-bottom: 1rem;
+}
+
+.about-hero-text p {
+   color: #6C7184;
+  font-size: 1.55rem;
+}
+
+.about-hero-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #eee9e0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Secciones */
+.about-main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.about-modules-overview h2, .vision-mission h2 {
+  color: #6C7184;
+  border-bottom: 2px solid #C6CBDF;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+.about-modules-overview h3{
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.about-modules-overview p, .vision, .mission p{
+  font-size: 1.2rem;
+}
+
+/* Módulos */
+.about-module-card {
+  background-color: #eee9e0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Visión y Misión */
+.vision-mission {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.vision, .mission {
+  flex: 1;
+  background: #F1F0EC;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Creadores */
+.creators {
+  margin-top: 2rem;
+  background-color: #eee9e0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.creators h2 {
+  color: #6C7184;
+  border-bottom: 2px solid #C6CBDF;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.creators ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.creators li {
+  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .about-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-hero-image img {
+    max-width: 100%;
+  }
+
+  .vision-mission {
+    flex-direction: column;
+  }
 }

@@ -1,44 +1,180 @@
+/* Tipografía consistente */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFFEFE;
+  color: #6C7184;
   margin: 0;
 }
 
-h2 {
-  color: #007bff;
+.empleos-hero {
+  background-color: #F1F0EC;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid #C6CBDF;
+}
+
+.empleos-hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.empleos-hero-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.empleos-hero-text h1 {
+  color: #6C7184;
+  font-size: 2.7rem;
+  font-family: Caudex, serif;
+  margin-bottom: 1rem;
+}
+
+.empleos-hero-text p {
+  color: #6C7184;
+  font-size: 1.7rem;
+}
+
+.empleos-hero-image {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+
+}
+
+.empleos-hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  background-color: #eee9e0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* Filtros */
+.empleos-filters {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.empleos-filters h2 {
+  color: #6C7184;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
 }
 
 .filters {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
   flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
 }
 
-.filters select, button {
-  padding: 0.5rem;
-  border-radius: 4px;
+.filters label {
+  color: #6C7184;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.filters select, .filters button {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #C6CBDF;
+  background-color: #FFFEFE;
+  color: #6C7184;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.filters button {
+  background-color: #a4accd;
+  color: #FFFEFE;
+  border: none;
+  font-size: 1rem;
+}
+
+.filters select:hover, .filters button:hover {
+  background-color: #C6CBDF;
+  color: #FFFEFE;
+}
+
+/* Listado de empleos */
+.empleos-listado {
+  max-width: 1200px;
+  margin: 7rem auto;
+  padding: 0 1rem;
+}
+
+.empleos-listado h2 {
+  color: #6C7184;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.2rem;
 }
 
 .job-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .job-item {
-  background: #e9ecef;
+  background-color: #eee9e0;
+  border-radius: 12px;
   padding: 1rem;
-  border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+}
+
+.job-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
 }
 
 .job-details {
   display: none;
-  background: #fff;
-  border: 1px solid #ddd;
+  background-color: #FFFEFE;
+  border: 1px solid #C6CBDF;
+  border-radius: 12px;
   padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
+
+.job-details h3 {
+  color: #6C7184;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.job-details p {
+  color: #6C7184;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .job-list {
+    grid-template-columns: 1fr;
+  }
+  .empleos-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .empleos-hero-image img {
+    max-width: 100%;
+  }
+
+}
+
