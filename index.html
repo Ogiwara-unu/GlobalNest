@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Inclusión para Migrantes - Prototipo</title>
+    <style>
+        /* Estilos CSS para un diseño intuitivo e inclusivo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6; /* Mejora la legibilidad */
+        }
+        
+        header {
+            background-color: #007bff; /* Azul para accesibilidad y contraste */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #e9ecef;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        
+        main {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra para mejor visualización */
+        }
+        
+        h1, h2 {
+            color: #007bff;
+        }
+        
+        /* Filtros */
+        .filters {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .filters select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .job-item {
+            background-color: #e9ecef;
+            padding: 1rem;
+            border-radius: 4px;
+            cursor: pointer; /* Indica que es clickable */
+        }
+        
+        .job-details {
+            display: none; /* Oculto por defecto */
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        /* Checklist */
+        .checklist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
+            
+            .job-list {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Plataforma de Inclusión para Migrantes</h1>
+        <p>Protótipo: Centraliza información para tu integración social, laboral y legal.</p>
+    </header>
+    
+    <nav>
+        <a href="#buscador">Buscador de Empleos</a> | 
+        <a href="#checklist">Checklist de Trámites</a>
+    </nav>
+    
+    <main>
+        <section id="buscador">
+            <h2>Buscador de Empleos</h2>
+            <p>Consulta oportunidades laborales y filtra según tus necesidades (RF 01, RF 02, RF 03).</p>
+            
+            <div class="filters">
+                <label for="filter-zona">Filtrar por zona geográfica (RF 02):</label>
+                <select id="filter-zona">
+                    <option value="all">Todas</option>
+                    <option value="ciudad1">Ciudad 1 (Ej: Madrid)</option>
+                    <option value="ciudad2">Ciudad 2 (Ej: Barcelona)</option>
+                    <option value="ciudad3">Ciudad 3 (Ej: México DF)</option>
+                </select>
+                
+                <label for="filter-sector">Filtrar por sector laboral (RF 03):</label>
+                <select id="filter-sector">
+                    <option value="all">Todos</option>
+                    <option value="construccion">Construcción</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="servicios">Servicios</option>
+                    <option value="otros">Otros</option>
+                </select>
+                
+                <button id="apply-filter">Aplicar Filtros</button>
+            </div>
+            
+            <div id="job-list" class="job-list">
+                <!-- Lista de empleos simulados (RF 01) -->
+                <div class="job-item" onclick="showDetails('job1')">Puesto: Desarrollador Web (Sector: Tecnología, Zona: Madrid)</div>
+                <div class="job-item" onclick="showDetails('job2')">Puesto: Albañil (Sector: Construcción, Zona: Barcelona)</div>
+                <div class="job-item" onclick="showDetails('job3')">Puesto: Atención al Cliente (Sector: Servicios, Zona: México DF)</div>
+                <div class="job-item" onclick="showDetails('job4')">Puesto: Analista de Datos (Sector: Tecnología, Zona: Madrid)</div>
+            </div>
+            
+            <div id="job-details" class="job-details">
+                <!-- Detalles del empleo (RF 04) -->
+                <h3 id="job-title">Detalles del Empleo</h3>
+                <p id="job-description">Descripción simulada: Nombre del puesto, requisitos, horas de trabajo, ubicación, etc.</p>
+            </div>
+        </section>
+        
+        <section id="checklist">
+            <h2>Checklist de Trámites Legales</h2>
+            <p>Guía paso a paso para organizar tus trámites (RF 05). Marca los ítems para simular el seguimiento.</p>
+            
+            <div class="checklist">
+                <ul>
+                    <li><input type="checkbox"> Obtener visa temporal</li>
+                    <li><input type="checkbox"> Registrar domicilio</li>
+                    <li><input type="checkbox"> Solicitar permiso de trabajo</li>
+                    <li><input type="checkbox"> Realizar examen médico</li>
+                    <li><input type="checkbox"> Abrir cuenta bancaria</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // JavaScript para simular interacciones (no funcional, solo prototipo)
+        
+        // Datos simulados de empleos (array de objetos)
+        const jobs = [
+            { id: 'job1', title: 'Desarrollador Web', sector: 'tecnologia', zona: 'ciudad1', description: 'Puesto: Desarrollador Web. Requisitos: Experiencia en HTML/CSS/JS. Horas: 40 semanales. Ubicación: Madrid.' },
+            { id: 'job2', title: 'Albañil', sector: 'construccion', zona: 'ciudad2', description: 'Puesto: Albañil. Requisitos: Certificado de construcción. Horas: 45 semanales. Ubicación: Barcelona.' },
+            { id: 'job3', title: 'Atención al Cliente', sector: 'servicios', zona: 'ciudad3', description: 'Puesto: Atención al Cliente. Requisitos: Fluidez en español. Horas: 35 semanales. Ubicación: México DF.' },
+            { id: 'job4', title: 'Analista de Datos', sector: 'tecnologia', zona: 'ciudad1', description: 'Puesto: Analista de Datos. Requisitos: Conocimientos en Python. Horas: 40 semanales. Ubicación: Madrid.' }
+        ];
+        
+        // Función para simular filtrado (RF 02 y RF 03)
+        document.getElementById('apply-filter').addEventListener('click', function() {
+            const zonaFilter = document.getElementById('filter-zona').value;
+            const sectorFilter = document.getElementById('filter-sector').value;
+            const jobListDiv = document.getElementById('job-list');
+            jobListDiv.innerHTML = '';  // Limpiar lista
+            
+            jobs.forEach(job => {
+                if ((zonaFilter === 'all' || job.zona === zonaFilter) &&
+                    (sectorFilter === 'all' || job.sector === sectorFilter)) {
+                    const jobItem = document.createElement('div');
+                    jobItem.className = 'job-item';
+                    jobItem.textContent = `Puesto: ${job.title} (Sector: ${job.sector}, Zona: ${job.zona})`;
+                    jobItem.onclick = () => showDetails(job.id);
+                    jobListDiv.appendChild(jobItem);
+                }
+            });
+        });
+        
+        // Función para mostrar detalles (RF 04)
+        function showDetails(jobId) {
+            const job = jobs.find(j => j.id === jobId);
+            if (job) {
+                document.getElementById('job-title').textContent = `Detalles de: ${job.title}`;
+                document.getElementById('job-description').textContent = job.description;
+                document.getElementById('job-details').style.display = 'block';  // Mostrar detalles
+            }
+        }
+    </script>
+</body>
+</html>
