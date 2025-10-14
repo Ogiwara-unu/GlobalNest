@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio de Recursos | GlobalNest</title>
+  <link rel="stylesheet" href="recursos.css">
+  <script defer src="recursos.js"></script>
+  <script defer src="../shared/shared.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section id="recursos">
+      <h2>Directorio de Recursos Sociales</h2>
+      <p>Encuentra organizaciones que brindan apoyo a personas migrantes.</p>
+
+      <div class="filters">
+        <label for="filter-tipo">Filtrar por tipo:</label>
+        <select id="filter-tipo"></select>
+        <button id="apply-filter">Aplicar</button>
+      </div>
+
+      <div id="recursos-list" class="recursos-list"></div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>

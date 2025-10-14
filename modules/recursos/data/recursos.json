@@ -1,0 +1,23 @@
+[
+  {
+    "id": "r1",
+    "nombre": "Refugio Esperanza",
+    "tipo": "Alojamiento",
+    "ubicacion": "Madrid",
+    "contacto": "Tel: +34 600 123 456"
+  },
+  {
+    "id": "r2",
+    "nombre": "Centro Legal Migrante",
+    "tipo": "Asesoría Legal",
+    "ubicacion": "Barcelona",
+    "contacto": "Email: contacto@legalmigrante.org"
+  },
+  {
+    "id": "r3",
+    "nombre": "Cruz Solidaria",
+    "tipo": "Salud",
+    "ubicacion": "México DF",
+    "contacto": "Tel: +52 55 1234 5678"
+  }
+]

@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+h2 {
+  color: #007bff;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.filters select, button {
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.job-item {
+  background: #e9ecef;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.job-details {
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}

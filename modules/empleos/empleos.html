@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Empleos | GlobalNest</title>
+  <link rel="stylesheet" href="empleos.css">
+  <script defer src="empleos.js"></script>
+  <script defer src="../shared/shared.js"></script>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <section id="buscador">
+      <h2>Buscador de Empleos</h2>
+      <p>Consulta oportunidades laborales y filtra según tus necesidades.</p>
+
+      <div class="filters">
+        <label for="filter-zona">Zona geográfica:</label>
+        <select id="filter-zona"></select>
+
+        <label for="filter-sector">Sector laboral:</label>
+        <select id="filter-sector"></select>
+
+        <button id="apply-filter">Aplicar Filtros</button>
+      </div>
+
+      <div id="job-list" class="job-list"></div>
+      <div id="job-details" class="job-details">
+        <h3 id="job-title">Detalles del Empleo</h3>
+        <p id="job-description">Selecciona una oferta para ver más información.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>

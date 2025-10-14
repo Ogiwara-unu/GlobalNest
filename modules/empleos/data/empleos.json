@@ -1,0 +1,30 @@
+[
+  {
+    "id": "job1",
+    "title": "Desarrollador Web",
+    "sector": "Tecnología",
+    "zona": "Madrid",
+    "description": "Requisitos: HTML, CSS, JS. Horario: 40h semanales."
+  },
+  {
+    "id": "job2",
+    "title": "Albañil",
+    "sector": "Construcción",
+    "zona": "Barcelona",
+    "description": "Requisitos: Certificado de construcción. Horario: 45h semanales."
+  },
+  {
+    "id": "job3",
+    "title": "Atención al Cliente",
+    "sector": "Servicios",
+    "zona": "México DF",
+    "description": "Requisitos: Fluidez en español. Horario: 35h semanales."
+  },
+  {
+    "id": "job4",
+    "title": "Analista de Datos",
+    "sector": "Tecnología",
+    "zona": "Madrid",
+    "description": "Requisitos: Conocimientos en Python. Horario: 40h semanales."
+  }
+]

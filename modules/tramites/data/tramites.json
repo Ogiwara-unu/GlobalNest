@@ -1,0 +1,7 @@
+[
+  { "id": "t1", "descripcion": "Obtener visa temporal" },
+  { "id": "t2", "descripcion": "Registrar domicilio" },
+  { "id": "t3", "descripcion": "Solicitar permiso de trabajo" },
+  { "id": "t4", "descripcion": "Realizar examen médico" },
+  { "id": "t5", "descripcion": "Abrir cuenta bancaria" }
+]
